@@ -22,14 +22,17 @@ export default function AppForm( {navigation}) {
       <Text style={styles.title}>Item para comprar</Text>
       <View style={styles.inputContainer}>
         <TextInput style={styles.input}
+        onChangeText={handleDescriptionChange}
         placeholder='O que está faltando em casa'
         clearButtonMode='always'>
         </TextInput>
         <TextInput style={styles.input}
+        onChangeText={handleQuantityChange}
         placeholder='Digita a quantidade'
         keyboardType={'numeric'}
         clearButtonMode='always'/>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} 
+        onPress={handleButtonPress}>
           <Text style={styles.buttonText}>Salvar</Text>
         </TouchableOpacity>
 
