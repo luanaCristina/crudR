@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export default function AppForm( {navigation}) {
   const [descricao, setDescricao] = useState('');
@@ -13,7 +14,7 @@ export default function AppForm( {navigation}) {
     setQuantidade(quantidade)
   }
   function handleButtonPress(){
-    console.log({id: new Date().getTime(), ´
+    console.log({id: new Date().getTime(), 
       descricao, quantidade});
     navigation.navigate('AppList')
   }
