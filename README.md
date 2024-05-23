@@ -72,4 +72,4 @@ https://reactnative.dev/
 https://react.dev/ 
 
 # 50 projetos com react
-https://media.licdn.com/dms/document/media/D561FAQHf1saAwvYjUA/feedshare-document-pdf-analyzed/0/1715567482597?e=1716422400&v=beta&t=VnbeONxkIC-KJteUd7qGyqycBk1wlaWr0WhYP_hcvwU
+https://github.com/colbyfayock/50-projects-for-react-and-the-static-web 
