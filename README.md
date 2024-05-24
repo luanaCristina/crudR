@@ -68,8 +68,15 @@ https://docs.expo.dev/tutorial/overview/
 # React Native
 https://reactnative.dev/
 
+# React Native - image
+https://reactnative.dev/docs/image
+
 # React
 https://react.dev/ 
+
+# Adicionar mapas e marcadores
+https://developers.google.com/codelabs/maps-platform/maps-platform-101-react-js?hl=pt-br#0 
+https://developers.google.com/maps/documentation/javascript/react-map?hl=pt-br 
 
 # 50 projetos com react
 https://github.com/colbyfayock/50-projects-for-react-and-the-static-web 
