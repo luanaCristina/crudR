@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage'
+import Database from './Database'
 
 export default function AppForm( {navigation}) {
   const [descricao, setDescricao] = useState('');
@@ -14,18 +14,9 @@ export default function AppForm( {navigation}) {
     setQuantidade(quantidade)
   }
   async function handleButtonPress(){
-    const listItem = {id: new Date().getTime(), 
-      descricao, quantidade};
-    let saveItems = []
-    const response =
-     await AsyncStorage.getItem('items');;
-
-    if(response) saveItems = JSON.parse(response);
-    saveItems.push(listItem)
-
-    await AsyncStorage.setItem('items', 
-    JSON.stringify(saveItems));
-    navigation.navigate('AppList')
+   const listItem = {descricao, quantidade: parseInt(quantidade)};
+   Database.saveItem(listItem)
+   .then(response => navigation.navigate("AppList", listItem))
   }
   return (
     <View style={styles.container}>

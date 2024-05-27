@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import Database from "./Database"
 
 export default function AppItem(props){
     return(
