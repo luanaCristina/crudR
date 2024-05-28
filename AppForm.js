@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 import Database from './Database'
 
 export default function AppForm( {navigation}) {
@@ -13,6 +13,7 @@ export default function AppForm( {navigation}) {
   function handleQuantityChange(quantidade){
     setQuantidade(quantidade)
   }
+
   async function handleButtonPress(){
    const listItem = {descricao, quantidade: parseInt(quantidade)};
    Database.saveItem(listItem)
@@ -20,6 +21,7 @@ export default function AppForm( {navigation}) {
   }
   return (
     <View style={styles.container}>
+    
       <Text style={styles.title}>Item para comprar</Text>
       <View style={styles.inputContainer}>
         <TextInput style={styles.input}

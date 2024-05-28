@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import AppItem from './AppItem';
 import Database from "./Database"
 
+//faltou a linha 19 e navigation da 23
 export default function AppList(route, navigation) {
   const [items, setItems] = useState([ ])
   useEffect(() => {
@@ -13,11 +14,13 @@ export default function AppList(route, navigation) {
     <View style={styles.container}>
       <Text style={styles.title}>Lista de compras
       </Text>
-      <ScrollView style={styles.scrollContainer}>
+      <ScrollView 
+      style={styles.scrollContainer}
+      contentContainerStyle={styles.itemsContainer}>
       { items.map(item => {
         return <AppItem key={item.id} id={item.id}
         item={item.quantidade + 'de' + 
-          item.descricao}/>
+          item.descricao} navigation ={navigation}/>
         })}
       </ScrollView>
     </View>

@@ -35,8 +35,11 @@ npm run start ( "start": "expo start")
 ou
 npm start
 
-4. Continue com o tutorial
-5. Lembre-se que esse link é apenas da primeira parte. Siga a continuação.
+4. para rodar o projeto em redes diferentes:
+npx expo start --tunnel
+
+5. Continue com o tutorial
+6. Lembre-se que esse link é apenas da primeira parte. Siga a continuação.
 
 
 Sugestões para corrigir o WARN @babel
@@ -80,3 +83,5 @@ https://developers.google.com/maps/documentation/javascript/react-map?hl=pt-br
 
 # 50 projetos com react
 https://github.com/colbyfayock/50-projects-for-react-and-the-static-web 
+
+

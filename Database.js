@@ -22,5 +22,4 @@ function getItems(){
 }
 
 module.exports = { 
-    saveitem, getItems }
-    
+    saveItem, getItems }

@@ -2,6 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+
 import AppList from './AppList';
 import AppForm from './AppForm';
 
@@ -9,6 +10,8 @@ const { Navigator, Screen } = createBottomTabNavigator();
 
 function AppTab() {
     return (
+        //<>
+        //<Imagem></Imagem>
         <NavigationContainer>
             <Navigator
                 screenOptions={{
@@ -35,8 +38,16 @@ function AppTab() {
                 options={{
                     tabBarLabel:"Adicionar"
                 }} />
+                <Screen name="Imagem" 
+                getComponent={() => require('./Imagem').default}
+                options={{
+                    tabBarLabel:"Imagem"
+                }} />
+                
             </Navigator>
+            
         </NavigationContainer>
+        //</>
     );
 }
 
