@@ -38,6 +38,10 @@ npm start
 4. para rodar o projeto em redes diferentes:
 npx expo start --tunnel
 
+5. limpar o cache
+npx expo start --clear
+npm cache clean --force
+
 5. Continue com o tutorial
 6. Lembre-se que esse link é apenas da primeira parte. Siga a continuação.
 

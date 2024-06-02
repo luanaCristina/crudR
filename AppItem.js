@@ -1,8 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native';
 import Database from "./Database"
 
 export default function AppItem(props){
+    async function handleEditPress(){
+        const item = await Database.getItem(props.id);
+        props.navigation.navigate("AppForm", item)
+    }
     return(
         <View style={styles.container}>
             <Text style={styles.textItem}>
@@ -15,6 +19,7 @@ export default function AppItem(props){
                 </TouchableOpacity>
                 <TouchableOpacity 
                 style={styles.editButton}>
+                    onPress={handleEditPress}
                     <Text style={styles.buttonText}>Editar</Text>
                 </TouchableOpacity>
             </View>

@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+const Stack = createNativeStackNavigator()  
 
 import AppList from './AppList';
 import AppForm from './AppForm';
@@ -38,10 +39,10 @@ function AppTab() {
                 options={{
                     tabBarLabel:"Adicionar"
                 }} />
-                <Screen name="Imagem" 
+                <Stack.Screen name="Imagem" 
                 getComponent={() => require('./Imagem').default}
                 options={{
-                    tabBarLabel:"Imagem"
+                    headerLeft: null
                 }} />
                 
             </Navigator>
