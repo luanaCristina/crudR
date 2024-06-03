@@ -29,18 +29,41 @@ npx expo install @react-native-async-storage/async-storage
 
 ```
 
-rodar o projeto
-npx expo start ()"@expo/cli": "xxx" )
-npm run start ( "start": "expo start")
+rodar o projeto quando o seu package.json:
+"@expo/cli": "xxx" 
+
+```
+npx expo start
+```
+
+"start": "expo start"
+
+```
+npm run start
+```
+
 ou
+
+```
 npm start
+```
 
 4. para rodar o projeto em redes diferentes:
+
+```
 npx expo start --tunnel
+```
 
 5. limpar o cache
+
+```
 npx expo start --clear
+```
+
+```
 npm cache clean --force
+```
+
 
 5. Continue com o tutorial
 6. Lembre-se que esse link é apenas da primeira parte. Siga a continuação.
